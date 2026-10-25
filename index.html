@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Сондор Кафе | Цахим меню</title>
+  <meta name="description" content="Сондор Кафены цахим меню. Кофе, цай, өглөөний хоол, үндсэн хоол, амттаныг гар утсаараа хялбар үзээрэй.">
+  <meta name="theme-color" content="#F6EFE4">
+  <meta property="og:title" content="Сондор Кафе | Цахим меню">
+  <meta property="og:description" content="Шинэхэн кофе, гэрийн амттай хоол, дулаан уур амьсгал.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1200&h=630&q=70">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-cyrillic-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#menu">Меню руу шилжих</a>
+
+  <header class="topbar" id="top">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top" aria-label="Сондор Кафе, нүүр хэсэг">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M12 17h14v5a7 7 0 0 1 -14 0z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M26 18.5h1.5a2.5 2.5 0 0 1 0 5H26" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M16 10.5c-1 1.2 1 2.2 0 3.5M20 10c-1 1.2 1 2.2 0 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand__name">Сондор <em>Кафе</em></span>
+      </a>
+      <span class="status" id="status" aria-live="polite"><span class="status__dot"></span><span class="status__text">Цагийн хуваарь</span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Кофе шоп ба гал тогоо</p>
+          <h1 id="hero-title" class="hero__title">Сондор Кафе</h1>
+          <p class="hero__lead">Шинэхэн шарсан кофе, гэрийн амттай хоол, дулаан уур амьсгал. Өглөөний кофеноос эхлээд оройн амттан хүртэл таныг тухтай хүлээж байна.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#menu">
+              Меню үзэх
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12m0 0l5 -5m-5 5l-5 -5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#qr">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h5v5H3zM12 3h5v5h-5zM3 12h5v5H3zM12 12h2v2h-2zM15 15h2v2h-2zM12 16h1M16 12h1" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+              QR код
+            </a>
+          </div>
+          <ul class="facts" aria-label="Кафены мэдээлэл">
+            <li><strong>08:00</strong><span>цагаас нээгдэнэ</span></li>
+            <li><strong>26</strong><span>төрлийн бүтээгдэхүүн</span></li>
+            <li><strong>100%</strong><span>арабика кофе</span></li>
+          </ul>
+        </div>
+        <figure class="hero__media">
+          <img
+            src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&h=1050&q=70"
+            srcset="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&h=700&q=70 600w,
+                    https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&h=1050&q=70 900w,
+                    https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1200&h=1400&q=70 1200w"
+            sizes="(min-width: 960px) 440px, 92vw"
+            width="900" height="1050" alt="Кофены үр, латте бүхий ширээ" fetchpriority="high" decoding="async">
+          <figcaption class="hero__card">
+            <span class="hero__card-label">Өнөөдрийн онцлох</span>
+            <span class="hero__card-name">Чацарганатай цай</span>
+            <span class="hero__card-price">7,500₮</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Манай меню</p>
+          <h2 id="menu-title" class="section-title">Юу амтлах вэ?</h2>
+        </div>
+      </div>
+
+      <nav class="tabs" aria-label="Менюгийн ангилал">
+        <div class="wrap">
+          <div class="tabs__track" role="tablist" id="tabs"></div>
+        </div>
+      </nav>
+
+      <div class="wrap">
+        <div class="panel" id="panel" role="tabpanel" tabindex="-1" aria-live="polite">
+          <div class="panel__head">
+            <h3 class="panel__title" id="panel-title"></h3>
+            <p class="panel__note" id="panel-note"></p>
+          </div>
+          <ul class="grid" id="grid"></ul>
+        </div>
+        <noscript><p class="noscript">Менюг харахын тулд браузерынхаа JavaScript тохиргоог идэвхжүүлнэ үү.</p></noscript>
+      </div>
+    </section>
+
+    <section class="qr" id="qr" aria-labelledby="qr-title">
+      <div class="wrap">
+        <div class="qr__card">
+          <div class="qr__code-wrap">
+            <div class="qr__code" id="qr-code" role="img" aria-label="Менюгийн холбоосын QR код"></div>
+          </div>
+          <div class="qr__copy">
+            <p class="eyebrow eyebrow--light">QR меню</p>
+            <h2 id="qr-title" class="section-title section-title--light">Утсаараа меню үзэх</h2>
+            <p>Камераа QR код руу чиглүүлэхэд меню шууд нээгдэнэ. Аппликейшн суулгах шаардлагагүй. Ширээ бүр дээр байрлуулахад тохиромжтой.</p>
+            <p class="qr__url" id="qr-url"></p>
+            <div class="qr__actions">
+              <button class="btn btn--light" type="button" id="copy-link">Холбоос хуулах</button>
+              <button class="btn btn--outline-light" type="button" id="download-qr">QR татах</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <p class="footer__brand">Сондор <em>Кафе</em></p>
+        <p class="footer__muted">Шинэхэн кофе, гэрийн амттай хоол.</p>
+      </div>
+      <div>
+        <p class="footer__label">Цагийн хуваарь</p>
+        <p>Өдөр бүр 08:00 цагаас 22:00 цаг хүртэл</p>
+      </div>
+      <div>
+        <p class="footer__label">Хаяг</p>
+        <p>Улаанбаатар хот, Сүхбаатар дүүрэг</p>
+      </div>
+    </div>
+    <div class="wrap footer__bottom">
+      <p>Үнэ төгрөгөөр, НӨАТ багтсан. Захиалга өгөхдөө зөөгчид хандана уу.</p>
+      <p>Демо хувилбар. Зураг: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></p>
+    </div>
+  </footer>
+
+  <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+    <div class="sheet__inner">
+      <button class="sheet__close" type="button" id="sheet-close" aria-label="Хаах">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <div class="sheet__media"><img id="sheet-img" alt="" width="800" height="600"></div>
+      <div class="sheet__body">
+        <span class="badge" id="sheet-badge" hidden></span>
+        <div class="sheet__titlebar">
+          <h3 class="sheet__title" id="sheet-title"></h3>
+          <p class="sheet__price" id="sheet-price"></p>
+        </div>
+        <p class="sheet__desc" id="sheet-desc"></p>
+        <dl class="specs">
+          <div><dt>Хэмжээ</dt><dd id="sheet-size"></dd></div>
+          <div><dt>Илчлэг</dt><dd id="sheet-kcal"></dd></div>
+          <div><dt>Хугацаа</dt><dd id="sheet-time"></dd></div>
+        </dl>
+        <p class="sheet__allergens" id="sheet-allergens"></p>
+        <p class="sheet__hint">Захиалга өгөхдөө зөөгчид бүтээгдэхүүний нэрийг хэлэхэд хангалттай.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="assets/js/menu-data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
