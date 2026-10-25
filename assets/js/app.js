@@ -44,11 +44,19 @@
   var byId = {};
   data.items.forEach(function (it) { byId[it.id] = it; });
 
+  function iconSvg(id) {
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICONS[id] + "</svg>";
+  }
+  var catById = {};
+  data.categories.forEach(function (c) { catById[c.id] = c; });
+  var factCount = document.getElementById("fact-count");
+  if (factCount) factCount.textContent = data.items.length;
+
   /* Tabs */
   tabsEl.innerHTML = data.categories.map(function (c) {
     var n = (byCat[c.id] || []).length;
-    return '<button class="tab" type="button" role="tab" id="tab-' + c.id + '" data-cat="' + c.id + '" aria-controls="panel" aria-selected="false" tabindex="-1">' +
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICONS[c.id] + "</svg>" +
+    return '<button class="tab" type="button" role="tab" id="tab-' + c.id + '" data-cat="' + c.id + '" aria-controls="panel" aria-selected="false" tabindex="-1" style="--accent:' + c.color + ";--soft:" + c.soft + '">' +
+      '<span class="tab__icon">' + iconSvg(c.id) + "</span>" +
       "<span>" + escapeHtml(c.name) + '</span><span class="tab__count" aria-label="' + n + ' бүтээгдэхүүн">' + n + "</span></button>";
   }).join("");
 
@@ -105,6 +113,10 @@
       }
     });
 
+    panelEl.style.setProperty("--accent", cat.color);
+    panelEl.style.setProperty("--soft", cat.soft);
+    $("panel-icon").innerHTML = iconSvg(cat.id);
+    $("panel-count").textContent = (byCat[cat.id] || []).length + " төрөл";
     titleEl.textContent = cat.name;
     noteEl.textContent = cat.note;
     gridEl.classList.remove("is-entering");
@@ -162,6 +174,10 @@
     var it = byId[id];
     if (!it) return;
     lastTrigger = trigger || null;
+    var cat = catById[it.cat];
+    sheet.style.setProperty("--accent", cat.color);
+    sheet.style.setProperty("--soft", cat.soft);
+    $("sheet-cat").textContent = cat.name;
     var img = $("sheet-img");
     img.removeAttribute("src");
     img.srcset = imgUrl(it.img, 640, 480) + " 640w, " + imgUrl(it.img, 1120, 840) + " 1120w";
