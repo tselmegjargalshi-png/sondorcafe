@@ -3,11 +3,11 @@
    Зураг: Unsplash (https://unsplash.com/license) */
 window.SONDOR_MENU = {
   categories: [
-    { id: "coffee", name: "Кофе", color: "#9A5B34", soft: "#F6E3D3", note: "Арабика үрийг өдөр бүр шинээр нунтаглан бэлтгэнэ." },
-    { id: "tea", name: "Цай", color: "#2F7A55", soft: "#DDEFE2", note: "Уламжлалт сүүтэй цайнаас эхлээд жимсний анхилуун цай хүртэл." },
-    { id: "breakfast", name: "Өглөөний хоол", color: "#C98612", soft: "#FBEBC8", note: "Өдөр бүр 08:00 цагаас 11:30 цаг хүртэл." },
-    { id: "main", name: "Үндсэн хоол", color: "#C4552E", soft: "#F9DCCF", note: "Монгол болон Европ хоолны шилдэг сонголт." },
-    { id: "dessert", name: "Амттан", color: "#B2466C", soft: "#F7DCE5", note: "Өдөр бүр кафе дээрээ гараар хийдэг амттан." }
+    { id: "coffee", thumb: "photo-1534778101976-62847782c213", name: "Кофе", color: "#9A5B34", soft: "#F6E3D3", note: "Арабика үрийг өдөр бүр шинээр нунтаглан бэлтгэнэ." },
+    { id: "tea", thumb: "photo-1597481499666-130f8eb2c9cd", name: "Цай", color: "#2F7A55", soft: "#DDEFE2", note: "Уламжлалт сүүтэй цайнаас эхлээд жимсний анхилуун цай хүртэл." },
+    { id: "breakfast", thumb: "photo-1528207776546-365bb710ee93", name: "Өглөөний хоол", color: "#C98612", soft: "#FBEBC8", note: "Өдөр бүр 08:00 цагаас 11:30 цаг хүртэл." },
+    { id: "main", thumb: "photo-1496116218417-1a781b1c416c", name: "Үндсэн хоол", color: "#C4552E", soft: "#F9DCCF", note: "Монгол болон Европ хоолны шилдэг сонголт." },
+    { id: "dessert", thumb: "photo-1571877227200-a0d98ea607e9", name: "Амттан", color: "#B2466C", soft: "#F7DCE5", note: "Өдөр бүр кафе дээрээ гараар хийдэг амттан." }
   ],
   items: [
     /* Кофе */

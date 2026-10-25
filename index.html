@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Сондор Кафе | Цахим меню</title>
   <meta name="description" content="Сондор Кафены цахим меню. Кофе, цай, өглөөний хоол, үндсэн хоол, амттаныг гар утсаараа хялбар үзээрэй.">
-  <meta name="theme-color" content="#1F3D2E">
+  <meta name="theme-color" content="#F3ECE0">
   <meta property="og:title" content="Сондор Кафе | Цахим меню">
-  <meta property="og:description" content="Шинэхэн кофе, гэрийн амттай хоол, дулаан уур амьсгал.">
+  <meta property="og:description" content="Аяга бүрт дулаан мөч. Шинэхэн кофе, гэрийн амттай хоол.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1200&h=630&q=70">
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=1200&h=630&q=70">
+  <link rel="icon" href="assets/img/favicon.svg?v=4" type="image/svg+xml">
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-cyrillic-600-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/manrope-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/cormorant-garamond-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/fonts.css?v=3">
-  <link rel="stylesheet" href="assets/css/styles.css?v=3">
+  <link rel="stylesheet" href="assets/css/fonts.css?v=4">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
 </head>
 <body>
   <a class="skip" href="#menu">Меню руу шилжих</a>
@@ -23,111 +23,124 @@
   <header class="topbar" id="top">
     <div class="wrap topbar__inner">
       <a class="brand" href="#top" aria-label="Сондор Кафе, нүүр хэсэг">
-        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
-          <circle cx="20" cy="20" r="20" fill="#E3A440"/>
-          <path d="M12 17h14v5a7 7 0 0 1 -14 0z" fill="none" stroke="#2A1810" stroke-width="1.8" stroke-linejoin="round"/>
-          <path d="M26 18.5h1.5a2.5 2.5 0 0 1 0 5H26" fill="none" stroke="#2A1810" stroke-width="1.8"/>
-          <path d="M16 10.5c-1 1.2 1 2.2 0 3.5M20 10c-1 1.2 1 2.2 0 3.5" fill="none" stroke="#2A1810" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
-        <span class="brand__name">Сондор <em>Кафе</em></span>
+        <span class="brand__name">Сондор</span>
+        <span class="brand__sub">Кафе</span>
       </a>
-      <span class="status" id="status" aria-live="polite"><span class="status__dot"></span><span class="status__text">Цагийн хуваарь</span></span>
+      <span class="status" id="status" aria-live="polite"><span class="status__dot"></span><span class="status__text">Өдөр бүр 08:00 цагаас</span></span>
     </div>
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__bg" aria-hidden="true">
-        <span class="blob blob--honey"></span>
-        <span class="blob blob--terra"></span>
-        <span class="blob blob--sage"></span>
-        <svg class="hero__beans" viewBox="0 0 200 200">
-          <g fill="none" stroke="currentColor" stroke-width="2.2">
-            <ellipse cx="40" cy="40" rx="14" ry="20" transform="rotate(-30 40 40)"/><path d="M33 26c8 8 6 20 14 28" transform="rotate(-30 40 40)"/>
-            <ellipse cx="160" cy="70" rx="12" ry="17" transform="rotate(25 160 70)"/><path d="M154 58c6 7 5 17 12 24" transform="rotate(25 160 70)"/>
-            <ellipse cx="110" cy="165" rx="10" ry="14" transform="rotate(60 110 165)"/><path d="M105 155c5 6 4 14 10 20" transform="rotate(60 110 165)"/>
-          </g>
-        </svg>
-      </div>
       <div class="wrap hero__grid">
         <div class="hero__copy">
-          <p class="pill"><span class="pill__dot"></span>Кофе шоп ба гал тогоо</p>
-          <h1 id="hero-title" class="hero__title">Сондор <span>Кафе</span></h1>
-          <p class="hero__lead">Шинэхэн шарсан кофе, гэрийн амттай хоол, дулаан уур амьсгал. Өглөөний кофеноос эхлээд оройн амттан хүртэл таныг тухтай хүлээж байна.</p>
+          <p class="kicker">
+            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8 -6.2L4 10l6.2 -1.8z" fill="currentColor"/></svg>
+            Улаанбаатарын тухтай кафе
+          </p>
+          <h1 id="hero-title" class="hero__title">Сондор <span>Кафе.</span></h1>
+          <p class="hero__tagline">Аяга бүрт дулаан мөч.</p>
+          <span class="rule" aria-hidden="true"></span>
+          <p class="hero__lead">Шинэхэн шарсан кофе, гэрийн жороор хийсэн хоол, өдөр бүр жигнэсэн амттан. Яаралгүй өглөө, тухтай уулзалт бүрт зориулав.</p>
           <div class="hero__actions">
-            <a class="btn btn--honey" href="#menu">
-              Меню үзэх
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12m0 0l5 -5m-5 5l-5 -5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <a class="btn btn--olive" href="#menu">Меню үзэх
+              <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12m0 0l-5 -5m5 5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a class="btn btn--glass" href="#qr">
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h5v5H3zM12 3h5v5h-5zM3 12h5v5H3zM12 12h2v2h-2zM15 15h2v2h-2zM12 16h1M16 12h1" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-              QR код
+            <a class="btn btn--line" href="#qr">QR код
+              <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h5v5H3zM12 3h5v5h-5zM3 12h5v5H3zM12 12h2v2h-2zM15 15h2v2h-2z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
             </a>
           </div>
-          <ul class="facts" aria-label="Кафены мэдээлэл">
-            <li><strong>08:00</strong><span>цагаас нээгдэнэ</span></li>
-            <li><strong id="fact-count">26</strong><span>төрлийн бүтээгдэхүүн</span></li>
-            <li><strong>100%</strong><span>арабика кофе</span></li>
-          </ul>
         </div>
-        <figure class="hero__media">
-          <div class="hero__frame">
-            <img
-              src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&h=1050&q=70"
-              srcset="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&h=700&q=70 600w,
-                      https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&h=1050&q=70 900w,
-                      https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1200&h=1400&q=70 1200w"
-              sizes="(min-width: 960px) 440px, 86vw"
-              width="900" height="1050" alt="Кофены үр, латте бүхий ширээ" fetchpriority="high" decoding="async">
-          </div>
-          <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
-            <defs><path id="stamp-circle" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1 -88 0"/></defs>
-            <circle cx="60" cy="60" r="58" fill="#E3A440"/>
-            <text font-size="11.5" font-weight="800" letter-spacing="2.6" fill="#2A1810"><textPath href="#stamp-circle">ШИНЭХЭН КОФЕ ✦ ГЭРИЙН ХООЛ ✦ </textPath></text>
-            <g transform="translate(43 42)" fill="none" stroke="#2A1810" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
-              <path d="M3 12h22v7a11 11 0 0 1 -22 0z"/><path d="M25 14h2.5a4 4 0 0 1 0 8H25"/><path d="M10 3c-1.5 2 1.5 3.5 0 5.5M16 3c-1.5 2 1.5 3.5 0 5.5"/>
-            </g>
+
+        <div class="hero__art">
+          <div class="hero__shape" aria-hidden="true"></div>
+          <figure class="hero__photo">
+            <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&h=900&q=72"
+                 srcset="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=560&h=630&q=72 560w,
+                         https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&h=900&q=72 800w,
+                         https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=1100&h=1240&q=72 1100w"
+                 sizes="(min-width: 960px) 480px, 82vw" width="800" height="900"
+                 alt="Сүүн хөөсөн хээтэй капучино" fetchpriority="high" decoding="async">
+          </figure>
+          <figure class="hero__bubble hero__bubble--a">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=240&h=240&q=70" width="120" height="120" alt="Шинэхэн круассан" decoding="async">
+          </figure>
+          <figure class="hero__bubble hero__bubble--b">
+            <img src="https://images.unsplash.com/photo-1597481499666-130f8eb2c9cd?auto=format&fit=crop&w=240&h=240&q=70" width="120" height="120" alt="Чацарганатай цай" decoding="async">
+          </figure>
+          <svg class="sprig" width="90" height="120" viewBox="0 0 90 120" aria-hidden="true">
+            <path d="M45 118C44 80 50 46 70 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M47 92c-14 0 -24 -8 -28 -18c12 -2 24 4 28 18zM49 70c12 -2 22 -12 24 -24c-12 2 -22 10 -24 24zM52 52c-12 -2 -20 -12 -20 -24c11 3 19 12 20 24zM58 34c10 -3 16 -12 16 -22c-10 3 -15 11 -16 22z" fill="currentColor" opacity=".9"/>
           </svg>
-          <figcaption class="hero__card">
-            <span class="hero__card-label">Өнөөдрийн онцлох</span>
-            <span class="hero__card-name">Чацарганатай цай</span>
-            <span class="hero__card-price">7,500₮</span>
-          </figcaption>
-        </figure>
+          <div class="hero__card">
+            <img src="https://images.unsplash.com/photo-1597481499666-130f8eb2c9cd?auto=format&fit=crop&w=160&h=160&q=70" width="56" height="56" alt="" decoding="async">
+            <div>
+              <span class="hero__card-label">Өнөөдрийн онцлох</span>
+              <span class="hero__card-name">Чацарганатай цай</span>
+              <span class="hero__card-price">7,500₮</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <svg class="hero__wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40c240 40 480 40 720 0s480 -40 720 0v40H0z" fill="currentColor"/></svg>
     </section>
 
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>Кофе</span><i>✦</i><span>Цай</span><i>✦</i><span>Өглөөний хоол</span><i>✦</i><span>Үндсэн хоол</span><i>✦</i><span>Амттан</span><i>✦</i>
-        <span>Кофе</span><i>✦</i><span>Цай</span><i>✦</i><span>Өглөөний хоол</span><i>✦</i><span>Үндсэн хоол</span><i>✦</i><span>Амттан</span><i>✦</i>
+    <!-- Values -->
+    <section class="values" aria-label="Бидний онцлог">
+      <svg class="wave wave--top" viewBox="0 0 1440 60" preserveAspectRatio="none" width="100%" height="40" aria-hidden="true"><path d="M0 60V30C200 0 420 0 720 26S1240 54 1440 20V60z" fill="currentColor"/></svg>
+      <div class="wrap">
+        <p class="values__title"><span aria-hidden="true">❦</span> Чанар бүрт анхаарал, аяга бүрт сэтгэл <span aria-hidden="true">❦</span></p>
+        <ul class="values__list">
+          <li>
+            <span class="values__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="12" rx="6" ry="9" transform="rotate(20 12 12)"/><path d="M9 5c3 4 3 10 6 14"/></svg></span>
+            <strong>Шинэхэн үр</strong><span>Долоо хоног бүр шардаг арабика</span>
+          </li>
+          <li>
+            <span class="values__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 21c-5 -2 -8 -6 -8 -11c4 0 7 2 8 5c1 -3 4 -5 8 -5c0 5 -3 9 -8 11z"/><path d="M12 15V4"/></svg></span>
+            <strong>Байгалийн орц</strong><span>Монгол чацаргана, шинэ сүү</span>
+          </li>
+          <li>
+            <span class="values__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 14c0 -5 4 -9 8 -9s8 4 8 9"/><path d="M2 14h20M6 18h12"/></svg></span>
+            <strong>Гэрийн жор</strong><span>Бууз, цуйван гараар бэлтгэнэ</span>
+          </li>
+          <li>
+            <span class="values__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M5 11h14l-1.5 9h-11z"/><path d="M7 11a5 5 0 0 1 10 0"/></svg></span>
+            <strong>Өдөр бүр жигнэнэ</strong><span>Круассан, бялуу өглөө бүр</span>
+          </li>
+        </ul>
       </div>
-    </div>
+    </section>
 
+    <!-- Signature picks -->
+    <section class="picks" aria-labelledby="picks-title">
+      <div class="wrap">
+        <div class="section-head section-head--center">
+          <p class="kicker"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8 -6.2L4 10l6.2 -1.8z" fill="currentColor"/></svg> Шилдэг сонголт</p>
+          <h2 id="picks-title" class="section-title">Улирлын онцлох амт</h2>
+          <p class="section-sub">Зочдын хамгийн их сонгодог бүтээгдэхүүнүүд.</p>
+        </div>
+      </div>
+      <div class="picks__rail" id="picks"></div>
+    </section>
+
+    <!-- Menu -->
     <section class="menu" id="menu" aria-labelledby="menu-title">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Манай меню</p>
+          <p class="kicker"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8 -6.2L4 10l6.2 -1.8z" fill="currentColor"/></svg> Бүтэн меню</p>
           <h2 id="menu-title" class="section-title">Юу амтлах вэ?</h2>
         </div>
       </div>
 
       <nav class="tabs" aria-label="Менюгийн ангилал">
-        <div class="wrap">
-          <div class="tabs__track" role="tablist" id="tabs"></div>
-        </div>
+        <div class="tabs__track" role="tablist" id="tabs"></div>
       </nav>
 
       <div class="wrap">
         <div class="panel" id="panel" role="tabpanel" tabindex="-1" aria-live="polite">
           <div class="panel__head">
-            <span class="panel__icon" id="panel-icon" aria-hidden="true"></span>
-            <div class="panel__text">
-              <h3 class="panel__title" id="panel-title"></h3>
-              <p class="panel__note" id="panel-note"></p>
-            </div>
-            <span class="panel__count" id="panel-count"></span>
+            <h3 class="panel__title" id="panel-title">Кофе</h3>
+            <p class="panel__note" id="panel-note"></p>
           </div>
           <ul class="grid" id="grid"></ul>
         </div>
@@ -135,22 +148,27 @@
       </div>
     </section>
 
+    <!-- QR + quote -->
     <section class="qr" id="qr" aria-labelledby="qr-title">
-      <div class="wrap">
+      <div class="wrap qr__grid">
+        <div class="quote">
+          <span class="quote__mark" aria-hidden="true">“</span>
+          <p class="quote__text">Хамгийн сайхан мөчүүд яаруу биш. Тэд сэтгэлээр бүтээгдэж, хамтдаа хуваалцагддаг.</p>
+          <p class="quote__by">Сондор Кафены баг</p>
+          <svg class="quote__sprig" width="70" height="90" viewBox="0 0 90 120" aria-hidden="true">
+            <path d="M45 118C44 80 50 46 70 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M47 92c-14 0 -24 -8 -28 -18c12 -2 24 4 28 18zM49 70c12 -2 22 -12 24 -24c-12 2 -22 10 -24 24zM52 52c-12 -2 -20 -12 -20 -24c11 3 19 12 20 24z" fill="currentColor"/>
+          </svg>
+        </div>
         <div class="qr__card">
-          <span class="qr__ring" aria-hidden="true"></span>
-          <div class="qr__code-wrap">
-            <div class="qr__code" id="qr-code" role="img" aria-label="Менюгийн холбоосын QR код"></div>
-            <span class="qr__tag">Уншуулаарай</span>
-          </div>
+          <div class="qr__code" id="qr-code" role="img" aria-label="Менюгийн холбоосын QR код"></div>
           <div class="qr__copy">
-            <p class="eyebrow eyebrow--light">QR меню</p>
-            <h2 id="qr-title" class="section-title section-title--light">Утсаараа меню үзэх</h2>
-            <p>Камераа QR код руу чиглүүлэхэд меню шууд нээгдэнэ. Аппликейшн суулгах шаардлагагүй. Ширээ бүр дээр байрлуулахад тохиромжтой.</p>
+            <h2 id="qr-title" class="qr__title">Утсаараа меню үзэх</h2>
+            <p>Камераа QR код руу чиглүүлэхэд меню шууд нээгдэнэ. Аппликейшн суулгах шаардлагагүй.</p>
             <p class="qr__url" id="qr-url"></p>
             <div class="qr__actions">
-              <button class="btn btn--honey" type="button" id="copy-link">Холбоос хуулах</button>
-              <button class="btn btn--glass" type="button" id="download-qr">QR татах</button>
+              <button class="btn btn--olive btn--sm" type="button" id="copy-link">Холбоос хуулах</button>
+              <button class="btn btn--line btn--sm" type="button" id="download-qr">QR татах</button>
             </div>
           </div>
         </div>
@@ -159,30 +177,33 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap footer__grid">
-      <div>
-        <p class="footer__brand">Сондор <em>Кафе</em></p>
-        <p class="footer__muted">Шинэхэн кофе, гэрийн амттай хоол.</p>
+    <svg class="wave wave--footer" viewBox="0 0 1440 60" preserveAspectRatio="none" width="100%" height="40" aria-hidden="true"><path d="M0 60V28C240 58 520 58 760 30S1220 0 1440 24V60z" fill="currentColor"/></svg>
+    <div class="footer__inner">
+      <div class="wrap footer__grid">
+        <div>
+          <p class="footer__brand">Сондор <span>Кафе</span></p>
+          <p class="footer__muted">Аяга бүрт дулаан мөч.</p>
+        </div>
+        <div>
+          <p class="footer__label">Цагийн хуваарь</p>
+          <p>Өдөр бүр 08:00 цагаас 22:00 цаг хүртэл</p>
+        </div>
+        <div>
+          <p class="footer__label">Хаяг</p>
+          <p>Улаанбаатар хот, Сүхбаатар дүүрэг</p>
+        </div>
       </div>
-      <div>
-        <p class="footer__label">Цагийн хуваарь</p>
-        <p>Өдөр бүр 08:00 цагаас 22:00 цаг хүртэл</p>
+      <div class="wrap footer__bottom">
+        <p>Үнэ төгрөгөөр, НӨАТ багтсан. Захиалга өгөхдөө зөөгчид хандана уу.</p>
+        <p>Демо хувилбар. Зураг: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></p>
       </div>
-      <div>
-        <p class="footer__label">Хаяг</p>
-        <p>Улаанбаатар хот, Сүхбаатар дүүрэг</p>
-      </div>
-    </div>
-    <div class="wrap footer__bottom">
-      <p>Үнэ төгрөгөөр, НӨАТ багтсан. Захиалга өгөхдөө зөөгчид хандана уу.</p>
-      <p>Демо хувилбар. Зураг: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></p>
     </div>
   </footer>
 
   <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
     <div class="sheet__inner">
       <button class="sheet__close" type="button" id="sheet-close" aria-label="Хаах">
-        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
       </button>
       <div class="sheet__media"><img id="sheet-img" alt="" width="800" height="600"></div>
       <div class="sheet__body">
@@ -206,7 +227,7 @@
     </div>
   </dialog>
 
-  <script src="assets/js/menu-data.js?v=3" defer></script>
-  <script src="assets/js/app.js?v=3" defer></script>
+  <script src="assets/js/menu-data.js?v=4" defer></script>
+  <script src="assets/js/app.js?v=4" defer></script>
 </body>
 </html>

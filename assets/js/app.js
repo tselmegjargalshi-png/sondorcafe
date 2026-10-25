@@ -23,6 +23,7 @@
   var titleEl = $("panel-title");
   var noteEl = $("panel-note");
 
+  var PLUS = '<span class="plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 20 20"><path d="M10 4.5v11M4.5 10h11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>';
   var fmt = function (n) { return n.toLocaleString("en-US") + "₮"; };
 
   function imgUrl(id, w, h) {
@@ -55,10 +56,29 @@
   /* Tabs */
   tabsEl.innerHTML = data.categories.map(function (c) {
     var n = (byCat[c.id] || []).length;
-    return '<button class="tab" type="button" role="tab" id="tab-' + c.id + '" data-cat="' + c.id + '" aria-controls="panel" aria-selected="false" tabindex="-1" style="--accent:' + c.color + ";--soft:" + c.soft + '">' +
-      '<span class="tab__icon">' + iconSvg(c.id) + "</span>" +
+    return '<button class="tab" type="button" role="tab" id="tab-' + c.id + '" data-cat="' + c.id + '" aria-controls="panel" aria-selected="false" tabindex="-1">' +
+      '<span class="tab__thumb"><img src="' + imgUrl(c.thumb, 96, 96) + '" width="48" height="48" alt="" decoding="async"></span>' +
       "<span>" + escapeHtml(c.name) + '</span><span class="tab__count" aria-label="' + n + ' бүтээгдэхүүн">' + n + "</span></button>";
   }).join("");
+
+  /* Signature picks */
+  var picksEl = $("picks");
+  if (picksEl) {
+    var picks = data.items.filter(function (it) { return it.badge === "Онцлох" || it.badge === "Шефийн санал"; });
+    picksEl.innerHTML = picks.map(function (it) {
+      return '<button class="pick" type="button" data-id="' + it.id + '" aria-haspopup="dialog" aria-label="' + escapeHtml(it.name) + ", " + fmt(it.price) + ', дэлгэрэнгүй">' +
+        '<span class="pick__media"><img src="' + imgUrl(it.img, 520, 600) + '" width="260" height="300" alt="' + escapeHtml(it.alt) + '" loading="lazy" decoding="async">' +
+          '<span class="pick__cat">' + escapeHtml(catById[it.cat].name) + "</span></span>" +
+        '<span class="pick__body"><span class="pick__name">' + escapeHtml(it.name) + "</span>" +
+          '<span class="pick__desc">' + escapeHtml(it.short) + "</span>" +
+          '<span class="pick__foot"><span class="pick__price">' + fmt(it.price) + "</span>" + PLUS + "</span></span>" +
+      "</button>";
+    }).join("");
+    picksEl.addEventListener("click", function (e) {
+      var b = e.target.closest(".pick");
+      if (b) openItem(b.dataset.id, b);
+    });
+  }
 
   var tabs = Array.prototype.slice.call(tabsEl.querySelectorAll(".tab"));
   var current = null;
@@ -70,13 +90,13 @@
         '<button class="card__btn" type="button" data-id="' + it.id + '" aria-haspopup="dialog" aria-label="' + escapeHtml(it.name) + ", " + fmt(it.price) + ', дэлгэрэнгүй">' +
           '<span class="card__media">' +
             '<img src="' + imgUrl(it.img, 480, 360) + '" srcset="' + imgUrl(it.img, 240, 240) + " 240w, " + imgUrl(it.img, 480, 360) + " 480w, " + imgUrl(it.img, 720, 540) + ' 720w" ' +
-            'sizes="(min-width: 960px) 340px, (min-width: 640px) 46vw, 108px" width="480" height="360" alt="' + escapeHtml(it.alt) + '" loading="lazy" decoding="async">' +
+            'sizes="(min-width: 960px) 340px, (min-width: 640px) 46vw, 112px" width="480" height="360" alt="' + escapeHtml(it.alt) + '" loading="lazy" decoding="async">' +
           "</span>" +
           '<span class="card__body">' +
             '<span class="card__top"><span class="card__name">' + escapeHtml(it.name) + "</span></span>" +
             '<span class="card__desc">' + escapeHtml(it.short) + "</span>" +
             '<span class="card__foot"><span class="card__price">' + fmt(it.price) + "</span>" +
-              '<span class="card__more" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 4.5v11M4.5 10h11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>' +
+              PLUS +
             "</span>" +
           "</span>" +
         "</button>" + badge +
@@ -113,10 +133,6 @@
       }
     });
 
-    panelEl.style.setProperty("--accent", cat.color);
-    panelEl.style.setProperty("--soft", cat.soft);
-    $("panel-icon").innerHTML = iconSvg(cat.id);
-    $("panel-count").textContent = (byCat[cat.id] || []).length + " төрөл";
     titleEl.textContent = cat.name;
     noteEl.textContent = cat.note;
     gridEl.classList.remove("is-entering");
@@ -175,8 +191,6 @@
     if (!it) return;
     lastTrigger = trigger || null;
     var cat = catById[it.cat];
-    sheet.style.setProperty("--accent", cat.color);
-    sheet.style.setProperty("--soft", cat.soft);
     $("sheet-cat").textContent = cat.name;
     var img = $("sheet-img");
     img.removeAttribute("src");
@@ -302,13 +316,13 @@
         if (qrModel.isDark(r, c)) path += "M" + c + " " + r + "h1v1h-1z";
       }
     }
-    $("qr-code").innerHTML = '<svg viewBox="0 0 ' + n + " " + n + '" shape-rendering="crispEdges" aria-hidden="true"><path fill="#3B261A" d="' + path + '"/></svg>';
+    $("qr-code").innerHTML = '<svg viewBox="0 0 ' + n + " " + n + '" shape-rendering="crispEdges" aria-hidden="true"><path fill="#2B1D14" d="' + path + '"/></svg>';
   }
 
   function loadQrLib() {
     if (window.qrcode) { buildQr(); return; }
     var s = document.createElement("script");
-    s.src = "assets/js/qrcode.min.js";
+    s.src = "assets/js/qrcode.min.js?v=4";
     s.onload = buildQr;
     document.head.appendChild(s);
   }
@@ -346,7 +360,7 @@
     var ctx = canvas.getContext("2d");
     ctx.fillStyle = "#FFFFFF";
     ctx.fillRect(0, 0, size, size);
-    ctx.fillStyle = "#3B261A";
+    ctx.fillStyle = "#2B1D14";
     for (var r = 0; r < n; r++) {
       for (var c = 0; c < n; c++) {
         if (qrModel.isDark(r, c)) ctx.fillRect((c + margin) * scale, (r + margin) * scale, scale, scale);
